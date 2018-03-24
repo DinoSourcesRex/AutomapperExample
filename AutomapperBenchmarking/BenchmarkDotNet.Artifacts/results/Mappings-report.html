@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>Mappings</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet=v0.10.13, OS=Windows 10 Redstone 3 [1709, Fall Creators Update] (10.0.16299.309)
+Intel Core i7-6700K CPU 4.00GHz (Skylake), 1 CPU, 8 logical cores and 4 physical cores
+Frequency=3914063 Hz, Resolution=255.4890 ns, Timer=TSC
+.NET Core SDK=2.1.4
+  [Host]     : .NET Core 2.0.5 (CoreCLR 4.6.26020.03, CoreFX 4.6.26018.01), 64bit RyuJIT
+  DefaultJob : .NET Core 2.0.5 (CoreCLR 4.6.26020.03, CoreFX 4.6.26018.01), 64bit RyuJIT
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>         Method</th><th>       Mean</th><th>      Error</th><th>     StdDev</th>
+</tr>
+</thead><tbody><tr><td>AutomapperMapping</td><td>470.06 ns</td><td>5.7419 ns</td><td>5.3710 ns</td>
+</tr><tr><td>AutomapperMappingList</td><td>577,476,237.08 ns</td><td>8,406,351.6931 ns</td><td>7,863,305.8243 ns</td>
+</tr><tr><td>PocoMapping</td><td>29.30 ns</td><td>0.2618 ns</td><td>0.2449 ns</td>
+</tr><tr><td>PocoMappingList</td><td>315,919,318.70 ns</td><td>5,880,956.7676 ns</td><td>5,775,885.3465 ns</td>
+</tr></tbody></table>
+</body>
+</html>
